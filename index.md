@@ -1,1 +1,2 @@
-## Code and data to be released upon publication
+## Code avaiable at https://github.com/pamela-project/slambench
+ 
