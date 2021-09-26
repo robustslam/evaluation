@@ -1,2 +1,5 @@
+domain: robustslam.github.io
+url: https://robustslam.github.io
 theme: jekyll-theme-cayman
-title: Robust SLAM Systems: Are We There Yet?
+title: Are We There Yet?
+description: Website for the IROS Robust SLAM paper
