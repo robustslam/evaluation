@@ -1,0 +1,81 @@
+---
+layout: default
+title: Overview
+nav_order: 1
+---
+
+# Overview
+| ![](images/image_examples.png) | 
+|:--:| 
+| Selection of frames used for evaluation including dynamic objects, illumination changes, and fast motion  |
+
+<iframe width="100%" height="350" src="https://www.youtube.com/embed/p1TUxV2nA74" frameborder="0" allowfullscreen></iframe>
+
+
+We present a systematic evaluation of the robustness of open-source state-of-the-art SLAM 
+algorithms with respect to challenging conditions such as **fast motion**, **non-uniform illumination**, and **dynamic scenes**. 
+The experiments are performed with perturbations present both independently of each other and combined in the 
+context of long-term deployment in unconstrained environments.
+
+While the accuracy, efficiency and complexity of SLAM systems has increased steadily in the past decades, robustness
+and long-term operation remain major challenges. This work evaluates 6 open-source SLAM algorithms on 6 datasets, 
+across 3 computational platforms: Desktop, Laptop, and Jetson Xavier AGX.
+
+-----------------------------------
+
+### Setup details
+
+#### Experimental policy
+
+To control for any differences not inherent to the algorithms, we ensure that on each platform 
+any common dependencies undertaking significant computational tasks, such as OpenCV or g2o, are fixed to the same 
+version across all the SLAM systems evaluated. We use gcc 7 for compilation across all algorithms and 
+platforms, and CUDA 10.2 for GPU-based implementations. The DVFS of the processing cores (Turboboost) and GPU 
+(adaptive clocking) are disabled. For the Jetson platform, the [jetson stats tool](https://github.com/rbonghi/jetson_stats) 
+is used to control the DVFS.
+All the build processes have been modified to use the highest levels of compiler optimisation. The hyperparameters 
+of SLAM systems are configured following the recommendations of the original papers.
+
+#### Hardware platforms
+
+- Desktop: 32 GB RAM, 14-core Intel Core i9-9940X @ 3.30GHz, Nvidia TITAN RTX GPU with 24GB VRAM and 4608 CUDA cores @
+  1770 MHz
+- Laptop: Lenovo ThinkPad P53, 16GB RAM, 6-core Intel Core i7-9850H @ 2.60GHz, Nvidia Quadro RTX 3000 with 6GB
+  of VRAM and 1920 CUDA cores @ 1380 MHz
+- Jetson: 16 GB RAM, 8-core ARMv8.2 64-bit CPU @ 2.25GHz, Nvidia Volta GPU with 512 CUDA cores @ 1377 MHz, power 
+  capped at 30W. Data is loaded from a Samsung 970 EVO Plus SSD installed via a high-speed M.2 Key-M connector
+
+#### Algorithms
+
+- ORB-SLAM2 is a popular real-time SLAM system based on sparse ORB features. It incorporates RGB-D, monocular and stereoscopic input modalities.
+- ORB-SLAM3 is a recently released SLAM system
+developed on top of ORB-SLAM2 which introduces a multiple map system and visual-inertial odometry to improve
+robustness.
+- OpenVINS is a stereo visual-inertial SLAM system which uses an Extended Kalman Filter to fuse visual odometry 
+with inertial measurements.
+- ElasticFusion provides a globally-consistent dense RGB-D reconstruction approach that does not require a pose
+graph and represents the map using fused surfels.
+- ReFusion is a dense RGB-D 3D reconstruction method
+which exploits residuals obtained after the registration of
+input data with the reconstructed model to identify and filter
+out dynamic elements in the scene
+- FullFusion is a framework for semantic reconstruction of dynamic scenes. FullFusion leverages semantic information 
+to separate RGB-D inputs into a static and a dynamic frame. A modified implementation of KinectFusion is used
+to compute the pose and reconstruct a semantically labelled model of the static scene elements.
+
+
+[comment]: <> (#### Datasets)
+
+------------------------
+
+
+[![Paper preview](resources/preview.png)](resources/paper.pdf)
+
+Table of contents
+
+
+TUM
+ICL-NUIM
+Bonn
+EuRoC MAV/UZH FPV
+ETH Illumination
