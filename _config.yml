@@ -1,5 +1,5 @@
 domain: robustslam.github.io
 url: https://robustslam.github.io
-theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs
 title: Robust SLAM systems&#58; Are We There Yet?
 description: Website for the IROS Robust SLAM paper
