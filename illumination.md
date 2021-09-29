@@ -51,7 +51,7 @@ It is immediately clear from the results that thanks to lighting-invariance, the
 <p style="text-align:center"> Synthetic2 Flashlight </p>
 <hr>
 
-<img src="/results/ethi/ethl_syn2_global.png" />
+<img src="{{ '/results/ethi/ethl_syn2_global.png' | absolute_url }}" />
 <p style="text-align:center"> Synthetic2 Global Illumination </p>
 <hr>
 
