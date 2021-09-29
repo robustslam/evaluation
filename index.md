@@ -9,7 +9,7 @@ nav_order: 1
 <div align="center">
 <a style="font-size: x-large;" href="https://arxiv.org/pdf/2109.13160.pdf">Paper</a> 
 <a style="font-size: x-large; margin-left:10px; margin-right:10px;" href="https://www.youtube.com/watch?v=p1TUxV2nA74">Video</a> 
-<a style="font-size: x-large" href="https://github.com/pamela-project/slambench">GitHub</a> 
+<a style="font-size: x-large" href="https://github.com/pamela-project/slambench">GitHub</a> <br />
 </div>
 
 <iframe width="100%" height="350" src="https://www.youtube.com/embed/p1TUxV2nA74" frameborder="0" allowfullscreen></iframe>
@@ -29,12 +29,14 @@ across 3 computational platforms: Desktop, Laptop, and Jetson Xavier AGX.
 ### Setup details
 
 #### Experimental policy
+An **experiment** consists of a single run of an algorithm on one sequence. 
+We run each experiment 10 times on each of the platforms and report the aggregated results.
 
 To control for any differences not inherent to the algorithms, we ensure that on each platform 
 any common dependencies undertaking significant computational tasks, such as OpenCV or g2o, are fixed to the same 
 version across all the SLAM systems evaluated. We use gcc 7 for compilation across all algorithms and 
 platforms, and CUDA 10.2 for GPU-based implementations. The DVFS of the processing cores and GPU are disabled. For the Jetson platform, this is done using the [jetson stats tool](https://github.com/rbonghi/jetson_stats).
-All the build processes have been modified to use the highest levels of compiler optimisation. The hyperparameters 
+All the build processes have been modified to use the highest levels of compiler optimisation, including platform-specific compilation flags. The hyperparameters 
 of SLAM systems are configured following the recommendations of the original papers.
 
 #### Hardware platforms
@@ -49,14 +51,15 @@ of SLAM systems are configured following the recommendations of the original pap
 #### Algorithms
 
 - ORB-SLAM2 is a popular real-time SLAM system based on sparse ORB features. It incorporates RGB-D, monocular and stereoscopic input modalities.
-- ORB-SLAM3 is a recently released SLAM system developed on top of ORB-SLAM2 which introduces a multiple map system and visual-inertial odometry to improve robustness.
+- ORB-SLAM3 is a SLAM system developed on top of ORB-SLAM2 which introduces a multiple map system and visual-inertial odometry to improve robustness.
 - OpenVINS is a stereo visual-inertial SLAM system which uses an Extended Kalman Filter to fuse visual odometry with inertial measurements.
 - ElasticFusion provides a globally-consistent dense RGB-D reconstruction approach that does not require a pose graph and represents the map using fused surfels.
 - ReFusion is a dense RGB-D 3D reconstruction method which exploits residuals obtained after the registration of input data with the reconstructed model to identify and filter
 out dynamic elements in the scene.
 - FullFusion is a framework for semantic reconstruction of dynamic scenes. FullFusion leverages semantic information 
 to separate RGB-D inputs into a static and a dynamic frame. A modified implementation of KinectFusion is used
-to compute the pose and reconstruct a semantically labelled model of the static scene elements.
+to compute the pose and reconstruct a semantically labelled model of the static scene elements. Note that the dynamic masks are pre-computed rather than computed online.
+This was done to ensure that the masking is consistent across all platforms.
 
 
 [comment]: <> (#### Datasets)
