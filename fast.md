@@ -18,19 +18,19 @@ The data was acquired using a drone flying at high speeds in an industrial setti
 <div>
 
 <hr>
-<img src="/results/euroc-fast/MH_04_difficult.png" />
+<img src="{{ '/results/euroc-fast/MH_04_difficult.png' | absolute_url }}" />
 <p style="text-align:center"> Machine Hall 04 </p>
 <hr>
 
-<img src="/results/euroc-fast/MH_05_difficult.png" />
+<img src="{{ '/results/euroc-fast/MH_05_difficult.png' | absolute_url }}" />
 <p style="text-align:center"> Machine Hall 05 </p>
 <hr>
 
-<img src="/results/euroc-fast/V1_03_difficult.png" />
+<img src="{{ '/results/euroc-fast/V1_03_difficult.png' | absolute_url }} " />
 <p style="text-align:center"> Vicon Room1 03 </p>
 <hr>
 
-<img src="/results/euroc-fast/V2_03_difficult.png" />
+<img src="{{ '/results/euroc-fast/V2_03_difficult.png' | absolute_url }}" />
 <p style="text-align:center"> Vicon Room2 03 </p>
 
 </div>
