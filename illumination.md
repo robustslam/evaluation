@@ -23,31 +23,31 @@ It is immediately clear from the results that thanks to lighting-invariance, the
 
 <hr>
 
-<img src="/results/ethi/ethl_real_flash.png" />
+<img src="{{ '/results/ethi/ethl_real_flash.png' | absolute_url }} " />
 <p style="text-align:center"> Real Flashlight </p>
 <hr>
 
-<img src="/results/ethi/ethl_real_global.png" />
+<img src="{{ '/results/ethi/ethl_real_global.png' | absolute_url }} " />
 <p style="text-align:center"> Real Global Illumination </p>
 <hr>
 
-<img src="/results/ethi/ethl_real_local.png" />
+<img src="{{ '/results/ethi/ethl_real_local.png' | absolute_url }}" />
 <p style="text-align:center"> Real Local Illumination </p>
 <hr>
 
-<img src="/results/ethi/ethl_syn1_global.png" />
+<img src="{{ '/results/ethi/ethl_syn1_global.png' | absolute_url }}" />
 <p style="text-align:center"> Synthetic1 Global Illumination </p>
 <hr>
 
-<img src="/results/ethi/ethl_syn1_local.png" />
+<img src="{{ '/results/ethi/ethl_syn1_local.png' | absolute_url }}" />
 <p style="text-align:center"> Synthetic1 Local Illumination </p>
 <hr>
 
-<img src="/results/ethi/ethl_syn1_loc_glo.png" />
+<img src="{{ '/results/ethi/ethl_syn1_loc_glo.png' | absolute_url }}" />
 <p style="text-align:center"> Synthetic1 Local + Global Illumination </p>
 <hr>
 
-<img src="/results/ethi/ethl_syn2_flash.png" />
+<img src="{{ '/results/ethi/ethl_syn2_flash.png' | absolute_url }}" />
 <p style="text-align:center"> Synthetic2 Flashlight </p>
 <hr>
 
@@ -55,11 +55,11 @@ It is immediately clear from the results that thanks to lighting-invariance, the
 <p style="text-align:center"> Synthetic2 Global Illumination </p>
 <hr>
 
-<img src="/results/ethi/ethl_syn2_local.png" />
+<img src="{{ '/results/ethi/ethl_syn2_local.png' | absolute_url }}" />
 <p style="text-align:center"> Synthetic2 Local Illumination  </p>
 <hr>
 
-<img src="/results/ethi/ethl_syn2_loc_glo.png" />
+<img src="{{ '/results/ethi/ethl_syn2_loc_glo.png' | absolute_url }}" />
 <p style="text-align:center"> Synthetic2 Local + Global Illumination</p>
 <hr>
 

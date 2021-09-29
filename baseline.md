@@ -21,18 +21,24 @@ and the 4 synthetic sequences of the ICL-NUIM dataset.
 <details>
 	<summary>ICL-NUIM results</summary>
 
-<img src="/results/iclnuim/living_room_traj0_loop.png"/>
+<img src="{{ '/results/iclnuim/living_room_traj0_loop.png' | absolute_url }}"/>
 <p style="text-align:center"> ICL-NUIM Living Room 0 </p>
 
 
-<img src="/results/iclnuim/living_room_traj1_loop.png"/>
+<img src="{{ '/results/iclnuim/living_room_traj1_loop.png' | absolute_url }} "/>
 <p style="text-align:center"> ICL-NUIM Living Room 1 </p>
 
-<img src="/results/iclnuim/living_room_traj2_loop.png"/>
+<img src="{{ '/results/iclnuim/living_room_traj2_loop.png' | absolute_url }} "/>
 <p style="text-align:center"> ICL-NUIM Living Room 2 </p>
 
-<img src="/results/iclnuim/living_room_traj3_loop.png"/>
+<img src="{{ '/results/iclnuim/living_room_traj3_loop.png' | absolute_url }} "/>
 <p style="text-align:center"> ICL-NUIM Living Room 3 </p>
+</details>
+
+
+
+<details>
+	<summary>TUM RGB-D results</summary>
 </details>
 
 
@@ -46,31 +52,31 @@ Algorithms with stereo and stereo-inertial support are evaluated on the _easy_ a
 <details>
 	<summary>EuRoC results</summary>
 
-<img src="/results/euroc-baseline/MH_01_easy.png"/>
+<img src="{{ '/results/euroc-baseline/MH_01_easy.png' | absolute_url }}"/>
 <p style="text-align:center"> Machine Hall 01 (easy) </p>
 <hr> 
 
-<img src="/results/euroc-baseline/MH_02_easy.png"/>
+<img src="{{ '/results/euroc-baseline/MH_02_easy.png' | absolute_url }} "/>
 <p style="text-align:center"> Machine Hall 02 (easy) </p>
 <hr> 
 
-<img src="/results/euroc-baseline/MH_03_medium.png"/>
+<img src="{{ '/results/euroc-baseline/MH_03_medium.png' | absolute_url }}"/>
 <p style="text-align:center"> Machine Hall 03 (medium) </p>
 <hr> 
 
-<img src="/results/euroc-baseline/V1_01_easy.png"/>
+<img src="{{ '/results/euroc-baseline/V1_01_easy.png' | absolute_url }} "/>
 <p style="text-align:center"> Vicon Room1 01 (easy) </p>
 <hr> 
 
-<img src="/results/euroc-baseline/V1_02_medium.png"/>
+<img src="{{ '/results/euroc-baseline/V1_02_medium.png' | absolute_url }} "/>
 <p style="text-align:center"> Vicon Room1 02 (medium) </p>
 <hr> 
 
-<img src="/results/euroc-baseline/V2_01_easy.png"/>
+<img src="{{ '/results/euroc-baseline/V2_01_easy.png' | absolute_url }} "/>
 <p style="text-align:center"> Vicon Room2 01 (easy) </p>
 <hr> 
 
-<img src="/results/euroc-baseline/V2_02_medium.png"/>
+<img src="{{ '/results/euroc-baseline/V2_02_medium.png' | absolute_url }}"/>
 <p style="text-align:center"> Vicon Room2 02 (medium) </p>
 <hr> 
 
